@@ -1,4 +1,5 @@
 from math import pow, exp, sin, cos, tan, pi
+from typing import Tuple
 
 
 def bisection_method(a: float,
@@ -6,7 +7,7 @@ def bisection_method(a: float,
                      func=None,
                      error_func=None,
                      error: float = 1e-10,
-                     _iter: int = 9e10):
+                     _iter: int = 9e10) -> Tuple[float, float, int]:
     """Bisection method
 
     Params:
@@ -26,7 +27,9 @@ def bisection_method(a: float,
 
     Returns
     ------------------------------------------------------------------
-        Approximation of x
+        - Approximation of x
+        - Error
+        - Number of iterations
     """
     # Check Bolzano Theorem
     if func(a) * func(b) >= 0:
@@ -39,7 +42,7 @@ def bisection_method(a: float,
     # Current value of x
     x: float = b
     # Current error of the approximation
-    current_error: float = 1
+    current_error: float = 1.0
 
     while (error < current_error and i < _iter):
         # Save the previous approximation value
@@ -65,12 +68,11 @@ def bisection_method(a: float,
             b = x
         # Root was found
         else:
-            return x
+            return x, current_error, i
 
         i += 1
 
-    # Current approximation of x
-    return x
+    return x, current_error, i
 
 
 if __name__ == '__main__':
@@ -80,5 +82,6 @@ if __name__ == '__main__':
     error = lambda xi, xi_1: abs(xi - xi_1)
 
     # Compute with the bisection method
-    xi = bisection_method(0, 1, func, error, 0.05)
-    print(f"La aproximacion de x es {xi}")
+    xi, error, i = bisection_method(0, 1, func, error, 0.05)
+    print(
+        f"La aproximacion de x es {xi} y tomó {i} iteraciones con un error de {error}")
