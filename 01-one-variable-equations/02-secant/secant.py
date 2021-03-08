@@ -1,4 +1,5 @@
 from math import pow, exp, sin, cos, tan, pi
+from typing import Tuple
 
 
 def secant_method(xi_1: float,
@@ -6,7 +7,7 @@ def secant_method(xi_1: float,
                   func=None,
                   error_func=None,
                   error: float = 1e-10,
-                  _iter: int = 9e10):
+                  _iter: int = 9e10) -> Tuple[float, float, int]:
     """Secant method
 
     Params:
@@ -26,15 +27,17 @@ def secant_method(xi_1: float,
 
     Returns
     ------------------------------------------------------------------
-        Approximation of x
+        - Approximation of x
+        - Error
+        - Number of iterations
     """
 
     # Current iteration
-    i: int = 0
+    i: int = 1
     # Current value of x
     x: float = xi
     # Current error of the approximation
-    current_error: float = error(xi_1, xi)
+    current_error: float = 1.0
 
     while (error < current_error and i < _iter):
         # Evaluate function
@@ -50,7 +53,7 @@ def secant_method(xi_1: float,
         fx = func(x)
 
         # Show info
-        print(i, xi, xi_1, fxi, fxi_1, x, fx, sep="\t", end="\t")
+        print(i + 1, xi_1, fxi_1, xi, fxi, x, fx, f'<y = {m}x + {b}>', sep="\t", end="\t")
 
         # Save the previous approximation value
         xi_1 = xi
@@ -63,16 +66,16 @@ def secant_method(xi_1: float,
 
         i += 1
 
-    # Current approximation of x
-    return x
+    return x, current_error, i
 
 
 if __name__ == '__main__':
     # Function to work
     func = lambda x: x*cos(1 + x)
     # Error function
-    error_func = lambda x, xi: abs(x - xi)
+    error_func = lambda xi, xi_1: abs(xi - xi_1)
 
-    # Compute with the bisection method
-    xi = secant_method(-4, -2, func, error_func, _iter=5)
-    print(f"La aproximacion de x es {xi}")
+    # Compute with the secant method
+    xi, error, i = secant_method(-4, -2, func, error_func, _iter=5)
+    print(
+        f"La aproximacion de x es {xi} y tomó {i} iteraciones con un error de {error}")
