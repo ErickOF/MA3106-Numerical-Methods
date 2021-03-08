@@ -32,7 +32,7 @@ def false_position_method(xi_1: float,
         - Number of iterations
     """
     # Check Bolzano Theorem
-    if func(a) * func(b) >= 0:
+    if func(xi_1) * func(xi) >= 0:
         raise ValueError("Do not satisfy the Bolzano Theorem")
 
     # Current iteration
