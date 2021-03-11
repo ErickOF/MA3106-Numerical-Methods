@@ -56,10 +56,10 @@ function [x, currentError, i] = bisection (a, b, func, errorFunc, tol, maxIterat
 
         # Show info
         if i > 0
-            fprintf("%d\t%f\t%f\t%f\t%f\t%f\t%f\t-\n",
+            printf("%d\t%f\t%f\t%f\t%f\t%f\t%f\t-\n",
                  i, a, b, fa, fb, x, fx);
         else
-            fprintf("%d\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",
+            printf("%d\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",
                  i, a, b, fa, fb, x, fx, currentError);
         endif
 
@@ -92,4 +92,4 @@ errorFunc = @(xi, xi_1) abs(xi - xi_1);
 
 # Compute with the bisection method
 [xi, finalError, iterations] = bisection(a, b, func, errorFunc, tol, maxIterations);
-fprintf("La aproximación de x es %f después de %d iteraciones con un error de %f\n", xi, iterations, finalError);
+printf("La aproximación de x es %f después de %d iteraciones con un error de %f\n", xi, iterations, finalError);
