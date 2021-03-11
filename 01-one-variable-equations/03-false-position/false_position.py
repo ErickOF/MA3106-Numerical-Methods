@@ -40,16 +40,16 @@ def false_position_method(xi_1: float,
     # Current value of x
     x: float = xi
     # Current error of the approximation
-    current_error: float = error_func(xi_1, xi)
+    current_error: float = 1.0
 
     while (error < current_error and i < _iter):
         # Evaluate function
         fxi_1: float = func(xi_1)
         fxi: float = func(xi)
 
-        # Compute the tangent line
+        # Compute the secant line
         m = (fxi - fxi_1) / (xi - xi_1)
-        b = fxi - m*xi
+        b = fxi - m * xi
 
         # Compute the new approximation value
         x = -b / m
