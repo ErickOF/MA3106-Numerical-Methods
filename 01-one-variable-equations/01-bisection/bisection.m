@@ -1,27 +1,31 @@
-# Bisection method
-# 
-# Params:
-# ------------------------------------------------------------------
-#     - a: float.
-#         left-bounded of the interval
-#     - b: float
-#         right-bounded of the interval
-#     - func
-#         lambda function representing the function to work
-#     - error_func
-#         lambdad function to compute the error
-#     - tol: float
-#         error value
-#     - _iter: int
-#         number of iterations
-# 
-# Returns
-# ------------------------------------------------------------------
-#     Approximation of x
+%{
+Bisection method
+
+Params:
+------------------------------------------------------------------
+    - a: float.
+        left-bounded of the interval
+    - b: float
+        right-bounded of the interval
+    - func
+        lambda function representing the function to work
+    - error_func
+        lambdad function to compute the error
+    - tol: float
+        error value
+    - _iter: int
+        number of iterations
+
+Returns
+------------------------------------------------------------------
+    Approximation of x
+    Error
+    Number of iterations
+%}
 
 clear;
 
-function x = bisection (a, b, func, error_func, tol, iter)
+function [x, currentError, i] = bisection (a, b, func, errorFunc, tol, maxIterations)
     # Check Bolzano Theorem
     if func(a) * func(b) >= 0
         error("Do not satisfy the Bolzano Theorem");
@@ -34,9 +38,9 @@ function x = bisection (a, b, func, error_func, tol, iter)
     # Current value of x
     x = b;
     # Current error of the approximation
-    current_error = 1;
+    currentError = 1.0;
 
-    while (tol < current_error && i < iter)
+    while (tol < currentError && i < maxIterations)
         # Save the previous approximation value
         xi_1 = x;
         # Compute the new approximation value
@@ -48,7 +52,7 @@ function x = bisection (a, b, func, error_func, tol, iter)
         fx = func(x);
 
         # Compute the new error
-        current_error = error_func(x, xi_1);
+        currentError = errorFunc(x, xi_1);
 
         # Show info
         if i > 0
@@ -56,7 +60,7 @@ function x = bisection (a, b, func, error_func, tol, iter)
                  i, a, b, fa, fb, x, fx);
         else
             fprintf("%d\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",
-                 i, a, b, fa, fb, x, fx, current_error);
+                 i, a, b, fa, fb, x, fx, currentError);
         endif
 
         # Check intervals
@@ -73,11 +77,19 @@ function x = bisection (a, b, func, error_func, tol, iter)
     endwhile
 endfunction
 
+# Main
+# Interval
+a = 0;
+b = 1;
+# Max number of iterations
+maxIterations = 100;
+# Tolerance / error
+tol = 0.05;
 # Function to work
 func = @(x) e^x - sin(3*x) - 2;
 # Error function
-error_func = @(xi, xi_1) abs(xi - xi_1);
+errorFunc = @(xi, xi_1) abs(xi - xi_1);
 
 # Compute with the bisection method
-xi = bisection (0, 1, func, error_func, 0.05, 100)
-disp(xi);
+[xi, finalError, iterations] = bisection(a, b, func, errorFunc, tol, maxIterations);
+fprintf("La aproximación de x es %f después de %d iteraciones con un error de %f\n", xi, iterations, finalError);
