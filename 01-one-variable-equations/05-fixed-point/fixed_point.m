@@ -32,8 +32,8 @@ function [xk_1, currentError, iterations] = fixedPoint (x0, func, errorFunc, tol
         iterations += 1;
 
         # Show info
-        if iterations == 0
-            printf("%d\t%f%f\t-\n",
+        if iterations == 1
+            printf("%d\t%f\t%f\t-\n",
                  iterations, xk_1, xk);
         else
             printf("%d\t%f\t%f\t%f\n",
@@ -47,15 +47,15 @@ endfunction
 
 # Main
 # Initial value
-x0 = -0.6;
+x0 = 5;
 # Max number of iterations
 maxIter = 100;
 # Tolerance / error
-tol = 0.001/100;
+tol = 0.001;
 # Function to work
-func = @(x) -e^(x/2);
+func = @(x) -2*log(e^(-0.15*x) - 0.25);
 # Error function
-errorFunc = @(xi, xi_1) abs((xi - xi_1) / xi);
+errorFunc = @(xi, xi_1) abs(xi - xi_1);
 
 # Compute with the fixed point method
 [xi, finalError, iterations] = fixedPoint(x0, func, errorFunc, tol, maxIter);
