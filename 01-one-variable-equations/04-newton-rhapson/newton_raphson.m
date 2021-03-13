@@ -32,8 +32,8 @@ function [xAprox, iterations, currentError] = newtonRaphson (x0, func, errorFunc
     % Derivate function
     df = diff(f);
     % Current error
-    currentError = x0;
-    
+    currentError = inf;
+
     % Repeat until x approaches the root of the function
     for _=1:maxIter
         % Save previous value
