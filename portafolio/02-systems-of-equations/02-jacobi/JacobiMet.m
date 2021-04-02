@@ -1,4 +1,4 @@
-function [mSol] = GaussSeidelMet(A, b, x0, itermax, tol, p)
+function [mSol] = JacobiMet(A, b, x0, itermax, tol, p)
     n = length(A);
 
     cont = 1;
@@ -13,18 +13,17 @@ function [mSol] = GaussSeidelMet(A, b, x0, itermax, tol, p)
         x1 = zeros(n, 1);
 
         for fila = 1:n
-            suma0 = 0;
-            suma1 = 0;
+            suma = 0;
 
-            for col = 1:fila - 1
-                suma1 += A(fila, col) * x1(col, 1);
+            for col = 1:n
+
+                if (fila != col)
+                    suma += A(fila, col) * x0(col, 1);
+                end
+
             end
 
-            for col = fila + 1:n
-                suma0 += A(fila, col) * x0(col, 1);
-            end
-
-            x1(fila, 1) = (b(fila, 1) - suma1 - suma0) / A(fila, fila);
+            x1(fila, 1) = (b(fila, 1) - suma) / A(fila, fila);
         end
 
         mSol(cont, 1) = cont - 1;
