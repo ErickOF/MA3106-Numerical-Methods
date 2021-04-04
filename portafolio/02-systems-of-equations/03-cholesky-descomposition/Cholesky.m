@@ -8,8 +8,9 @@ function [x] = Cholesky(A, b)
     catch err
         printf("%s\n", err.message);
         printf("\nTransforming matrix...\n");
-        A = A' * A
-        b = A' * b
+        At = A';
+        A = At * A
+        b = At * b
 
         [L, Lt] = CholeskyDescomposition(A)
     end
