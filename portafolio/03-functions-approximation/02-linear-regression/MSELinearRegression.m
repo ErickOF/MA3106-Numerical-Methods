@@ -10,7 +10,7 @@ function [solTable, m, b] = MSELinearRegression(x, y)
 
     solTable(end + 1, :) = [sum(x), sum(x.^2), sum(y), sum(x .* y)];
 
-    m = (n * solTable(end, 4) - solTable(end, 1) * solTable(end, 3)) / (6 * solTable(end, 2) - solTable(end, 1)^2);
+    m = (n * solTable(end, 4) - solTable(end, 1) * solTable(end, 3)) / (n * solTable(end, 2) - solTable(end, 1)^2);
 
     b = (solTable(end, 3) - m * solTable(end, 1)) / n;
 end
