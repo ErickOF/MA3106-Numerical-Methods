@@ -40,7 +40,7 @@ xMax = (x0 > xn) * x0 + (x0 <= xn) * xn;
 for index = 1:numberOfZeros
     xi = dxZeros(index);
 
-    if (!(xMin >= xi && xi <= xMax))
+    if (!(xMin <= xi && xi <= xMax))
         xi
         printf("fuera del intervalo\n");
     elseif (xMin == xi)
