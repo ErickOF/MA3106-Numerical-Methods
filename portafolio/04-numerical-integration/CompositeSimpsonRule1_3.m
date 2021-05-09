@@ -11,7 +11,7 @@ function [approx] = CompositeSimpsonRule1_3(a, b, n, func)
         xi = a + k * h;
         fxi = func(xi);
 
-        printf("i = %d, x_%d = %f, f(x_%d) = f(x_%d) = %f\n", k, k, xi, k, xi, fxi);
+        printf("i = %d, x_%d = %f, f(x_%d) = f(%f) = %f\n", k, k, xi, k, xi, fxi);
 
         mult4 += fxi;
     end
@@ -25,7 +25,7 @@ function [approx] = CompositeSimpsonRule1_3(a, b, n, func)
         xi = a + k * h;
         fxi = func(xi);
 
-        printf("i = %d, x_%d = %f, f(x_%d) = f(x_%d) = %f\n", k, k, xi, k, xi, fxi);
+        printf("i = %d, x_%d = %f, f(x_%d) = f(%f) = %f\n", k, k, xi, k, xi, fxi);
 
         mult2 += fxi;
     end
