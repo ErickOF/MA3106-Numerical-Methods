@@ -21,7 +21,7 @@ function [approx] = CompositeSimpsonRule3_8(a, b, n, func)
 
     mult2 = 0;
 
-    for index = 1:n / 3 - 1
+    for index = 1:n / 3
         k = 3 * index;
         xi = a + k * h;
         fxi = func(xi);
