@@ -12,7 +12,7 @@ function [approx] = RombergRule(func, a, b, k)
 
         for i = j - 1:k - 1
             approx(i + 1, j) = (4^(j - 1) * approx(i + 1, j - 1) - approx(i, j - 1)) / (4^(j - 1) - 1);
-            printf("Usando k = %d, I(j+1, k-1) = %f, I(j, k-1) = %f, I(j, k) = %f\n",
+            printf("Usando k=%d, I(j+1,k-1)=%f, I(j,k-1)=%f, I(j,k)=%f\n",
                     j, approx(i + 1, j - 1), approx(i, j - 1), approx(i + 1, j));
         end
 
