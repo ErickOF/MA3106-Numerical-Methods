@@ -1,10 +1,10 @@
-function [M] = RK4_Met(a, b, f, n)
+function [M] = RK4_Met(a, b, y0 f, n)
     syms x y;
 
-    w = 2;
+    w = y0;
     h = (b - a) / n;
     t = a;
-    M = zeros(n, 2);
+    M = [a y0];
 
     for i = 1:n
         k1 = h * subs(f, [x y], [t w]);
