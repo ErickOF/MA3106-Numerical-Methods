@@ -22,6 +22,8 @@ function [resultTable] = AdamBashforth4(f, a, b, n, w0, w1, w2, w3)
         fti_1wi_1 = f(ti_1, wi_1);
         ftiwi = f(ti, wi);
 
+        wiplus1 = wi + h * (55 * ftiwi - 59 * fti_1wi_1 + 37 * fti_2wi_2 - 9 * fti_3wi_3) / 24;
+
         printf("\nPara i = %d\n", i - 1);
         printf("t%d = %f\n", i - 4, ti_3);
         printf("t%d = %f\n", i - 3, ti_2);
@@ -35,10 +37,11 @@ function [resultTable] = AdamBashforth4(f, a, b, n, w0, w1, w2, w3)
         printf("f(t%d, w%d) = %f\n", i - 3, i - 3, fti_2wi_2);
         printf("f(t%d, w%d) = %f\n", i - 2, i - 2, fti_1wi_1);
         printf("f(t%d, w%d) = %f\n", i - 1, i - 1, ftiwi);
+        printf("w%d = %f\n", i, wiplus1);
 
         resultTable(i + 1, 1) = i;
         resultTable(i + 1, 2) = ti + h;
-        resultTable(i + 1, 3) = wi + h * (55 * ftiwi - 59 * fti_1wi_1 + 37 * fti_2wi_2 - 9 * fti_3wi_3) / 24;
+        resultTable(i + 1, 3) = wiplus1;
     end
 
 end
