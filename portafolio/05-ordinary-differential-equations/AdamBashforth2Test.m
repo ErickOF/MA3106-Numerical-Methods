@@ -1,11 +1,11 @@
 clear;
 clc;
 
-func = @(t, y) 1 + y / t
+func = @(t, y) y .* e.^(2 . * t)
 
 a = 1
 b = 2
-n = 4
+n = 5
 
 w0 = 0
 w1 = 1
