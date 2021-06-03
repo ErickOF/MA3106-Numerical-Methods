@@ -1,4 +1,4 @@
-function [resultTable] = AdamBashforth4(f, a, b, n, w0, w1, w2, w3)
+function [resultTable] = AdamsBashforth4(f, a, b, n, w0, w1, w2, w3)
     h = (b - a) / n
 
     resultTable(1, :) = [1, a, w0];

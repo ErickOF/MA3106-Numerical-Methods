@@ -1,4 +1,4 @@
-function [resultTable] = AdamBashforth2(f, a, b, n, w0, w1)
+function [resultTable] = AdamsBashforth2(f, a, b, n, w0, w1)
     h = (b - a) / n
 
     resultTable(1, :) = [0, a, w0];

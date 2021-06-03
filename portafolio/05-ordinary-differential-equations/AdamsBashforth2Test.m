@@ -10,4 +10,4 @@ n = 5
 w0 = 0
 w1 = 1
 
-[resultTable] = AdamBashforth2(func, a, b, n, w0, w1)
+[resultTable] = AdamsBashforth2(func, a, b, n, w0, w1)

@@ -12,4 +12,4 @@ w1 = 0.040829243118682
 w2 = 0.256787182681211
 w3 = 0.712675460749765
 
-[resultTable] = AdamBashforth4(func, a, b, n, w0, w1, w2, w3)
+[resultTable] = AdamsBashforth4(func, a, b, n, w0, w1, w2, w3)
