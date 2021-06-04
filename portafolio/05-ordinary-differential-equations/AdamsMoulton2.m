@@ -1,7 +1,7 @@
 function [w] = AdamsMoulton2(f, a, b, n, w)
     h = (b - a) / n
 
-    for i = 4:n
+    for i = 2:n
         xi_1 = a + h * (i - 2);
         xi = a + h * (i - 1);
         xiplus1 = a + h * i;
