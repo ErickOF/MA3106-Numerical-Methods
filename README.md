@@ -14,7 +14,7 @@
   </h3>
 
   <p align="center">
-    Implementaciones en Octave GNU de los algoritmos vistos en el curso de Métodos Numéricos en el Tecnológico de Costa Rica.
+    Implementaciones en Octave GNU y Python3 de los algoritmos vistos en el curso de Métodos Numéricos en el Tecnológico de Costa Rica.
     <br />
     <br />
     ·
@@ -73,6 +73,7 @@ Este repositorio contiene diferentes implementaciones en Octave GNU de los algor
 ## Iniciando
 
 Para poder usar estos códigos se recomienda tener instalado [Octave GNU](https://www.gnu.org/software/octave/download) o usar [Octave en línea](http://octave-online.net/). También se puede usar [MATLAB](https://www.mathworks.com/downloads/web_downloads/?s_iid=hp_ff_t_downloads) pero no todos los códigos han sido probados.
+También se puede descargar la [Anaconda](https://www.anaconda.com/download#downloads) en su versión de Python3.11.
 
 
 <!-- USAGE EXAMPLES -->
@@ -118,15 +119,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ErickOF/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/ErickOF/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ErickOF/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/ErickOF/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/ErickOF/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/ErickOF/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ErickOF/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/ErickOF/repo/issues
-[license-shield]: https://img.shields.io/github/license/ErickOF/repo.svg?style=for-the-badge
-[license-url]: https://github.com/ErickOF/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ErickOF/MA3106-Numerical-Methods.svg
+[contributors-url]: https://github.com/ErickOF/MA3106-Numerical-Methods/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ErickOF/MA3106-Numerical-Methods.svg?style=for-the-badge
+[forks-url]: https://github.com/ErickOF/MA3106-Numerical-Methods/network/members
+[stars-shield]: https://img.shields.io/github/stars/ErickOF/MA3106-Numerical-Methods.svg?style=for-the-badge
+[stars-url]: https://github.com/ErickOF/MA3106-Numerical-Methods/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ErickOF/MA3106-Numerical-Methods.svg?style=for-the-badge
+[issues-url]: https://github.com/ErickOF/MA3106-Numerical-Methods/issues
+[license-shield]: https://img.shields.io/github/license/ErickOF/MA3106-Numerical-Methods.svg?style=for-the-badge
+[license-url]: https://github.com/ErickOF/MA3106-Numerical-Methods/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/ErickOF
