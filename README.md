@@ -44,19 +44,15 @@
         Iniciando
       </a>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#uso">Uso</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contribución">Contribución</a></li>
+    <li><a href="#licencia">Licencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
     <li>
-      <a href="#acknowledgements">
-        Acknowledgements
+      <a href="#reconocimiento">
+        Reconocimiento
       </a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
   </ol>
 </details>
@@ -73,48 +69,65 @@ Este repositorio contiene diferentes implementaciones en Octave GNU de los algor
 ## Iniciando
 
 Para poder usar estos códigos se recomienda tener instalado [Octave GNU](https://www.gnu.org/software/octave/download) o usar [Octave en línea](http://octave-online.net/). También se puede usar [MATLAB](https://www.mathworks.com/downloads/web_downloads/?s_iid=hp_ff_t_downloads) pero no todos los códigos han sido probados.
-También se puede descargar la [Anaconda](https://www.anaconda.com/download#downloads) en su versión de Python3.11.
+También se puede descargar [Anaconda](https://www.anaconda.com/download#downloads) en su versión de Python3.11.
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Uso
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+En contrucción.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://example.com)_-->
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/ErickOF/MA3106-Numerical-Methods/issues) for a list of proposed features (and known issues).
+Ver [open issues](https://github.com/ErickOF/MA3106-Numerical-Methods/issues) para una lista de características propuestas (y problemas conocidos).
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribución
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Las contribuciones son lo que hacen la comunidad de código abierto un lugar tan increíble para aprender, inspirar y crear. Cualquer contribución que se haga será **altamente apreciada**.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Hacer un fork del proyecto
+2. Crear una nueva rama (`git checkout -b feature/AmazingFeature`)
+3. Hacer commit de los cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Hacer push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir un Pull Request y esperar la aprobación
 
 
 
 <!-- LICENSE -->
-## License
+## Licencia
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distribuido bajo la licencia GPL-3.0. Ver `LICENSE` para más información.
 
 
 
 <!-- CONTACT -->
-## Contact
+## Contacto
 
+**Nombre:** Erick Andrés Obregón Fonseca.
+
+**Correo Personal:** erickobregonf@gmail.com.
+
+**Correo Estudiantil:** erickof@estudiantec.cr.
+
+**Correo IEEE:** erickof@ieee.org.
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- ACKNOWLEDGE -->
+## Reconocimiento
+
+A mis compañeras del curso Ana Gabriela Arroyo Rojas, Ashley María Piñeiro Conejo y Carol Natalie Ulloa Solano, quienes ayudaron a desarrollar parte los algoritmos de los laboratorios.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
