@@ -128,6 +128,7 @@ Distribuido bajo la licencia GPL-3.0. Ver `LICENSE` para más información.
 ## Reconocimiento
 
 A mis compañeras del curso Ana Gabriela Arroyo Rojas, Ashley María Piñeiro Conejo y Carol Natalie Ulloa Solano, quienes ayudaron a desarrollar parte los algoritmos de los laboratorios.
+Cui Ting Zhong Xie por ayudarme a definir una mejor visualización de los resultados de algunos métodos.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
