@@ -4,72 +4,72 @@ title: Dame un buen nombre
 labels: ["bug", "help wanted"]
 assignees: "ErickOF"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Por favor llenar las secciones abajo para ayudarnos a reproducir el error y arreglar el problema.
-  -type: dropdown
-    id: language
-    attributes:
-      label: Seleccionar el lenguaje de programación
-      multiple: true
-      options:
-        - Python
-        - Octave
+- type: markdown
+  attributes:
+    value: |
+      Por favor llenar las secciones abajo para ayudarnos a reproducir el error y arreglar el problema.
+- type: dropdown
+  id: language
+  attributes:
+    label: Seleccionar el lenguaje de programación
+    multiple: true
+    options:
+      - Python
+      - Octave
+  validations:
+    required: true
+- type: dropdown
+  id: method
+  attributes:
+    label: Seleccionar el tipo de método
+    multiple: true
+    options:
+      - Ecuaciones de una variable
+      - Sistemas de ecuaciones
+      - Aproximación de funciones
+      - Integración numérica
+      - Ecuaciones diferenciales ordinarias
+      - Otro
+  validations:
+    required: true
+- type: textarea
+  id: description
+  attributes:
+    label: Descripción del bug
+    placeholder: Descripción clara y concisa de qué trata el error.
+  validations:
+    required: true
+- type: textarea
+  id: steps
+  attributes:
+    label: ¿Cómo reproducir?
+    placeholder: |
+      Pasos para reproducir el comportamiento:
+      1. Ir a '...'
+      2. Presionar '....'
+      3. Desplazarse hacia abajo '....'
+      4. Ver error
     validations:
       required: true
-  -type: dropdown
-    id: method
-    attributes:
-      label: Seleccionar el tipo de método
-      multiple: true
-      options:
-        - Ecuaciones de una variable
-        - Sistemas de ecuaciones
-        - Aproximación de funciones
-        - Integración numérica
-        - Ecuaciones diferenciales ordinarias
-        - Otro
+- type: textarea
+  id: behaviour
+  attributes:
+    label: Comportamiento esperado
+    placeholder: Descripción clara y concisa de qué se espera que pase.
     validations:
       required: true
-  - type: textarea
-    id: description
-    attributes:
-      label: Descripción del bug
-      placeholder: Descripción clara y concisa de qué trata el error.
-    validations:
-      required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: ¿Cómo reproducir?
-      placeholder: |
-        Pasos para reproducir el comportamiento:
-        1. Ir a '...'
-        2. Presionar '....'
-        3. Desplazarse hacia abajo '....'
-        4. Ver error
-      validations:
+- type: textarea
+  id: screenshots
+  attributes:
+    label: Agregar cualquier captura de pantalla (opcional)
+- type: checkboxes
+  id: terms
+  attributes:
+    label: Campo extra
+    options:
+      - label: He usado la función de búsqueda para revisar si este problema ya existe.
         required: true
-  - type: textarea
-    id: behaviour
-    attributes:
-      label: Comportamiento esperado
-      placeholder: Descripción clara y concisa de qué se espera que pase.
-      validations:
-        required: true
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Agregar cualquier captura de pantalla (opcional)
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Campo extra
-      options:
-        - label: He usado la función de búsqueda para revisar si este problema ya existe.
-          required: true
-  - type: markdown
-    attributes:
-      value: |
-        ¡Gracias por reportar este error! Te contactaremos tan pronto como sea posible.
+- type: markdown
+  attributes:
+    value: |
+      ¡Gracias por reportar este error! Te contactaremos tan pronto como sea posible.

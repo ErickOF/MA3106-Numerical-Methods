@@ -4,72 +4,72 @@ title: Give me a good name
 labels: ["bug", "help wanted"]
 assignees: "ErickOF"
 body:
-  -type: markdown
-    attributes:
-      value: |
-        Please fill out the sections below to help us reproduce the bug and fix your issue.
-  -type: dropdown
-    id: language
-    attributes:
-      label: Select the programming language
-      multiple: true
-      options:
-        - Python
-        - Octave
+- type: markdown
+  attributes:
+    value: |
+      Please fill out the sections below to help us reproduce the bug and fix your issue.
+- type: dropdown
+  id: language
+  attributes:
+    label: Select the programming language
+    multiple: true
+    options:
+      - Python
+      - Octave
+  validations:
+    required: true
+- type: dropdown
+  id: method
+  attributes:
+    label: Select the method type
+    multiple: true
+    options:
+      - One Variable Equations
+      - Systems of Equations
+      - Function Approximation
+      - Numerical Integration
+      - Ordinary Differential Equation
+      - Other
+  validations:
+    required: true
+- type: textarea
+  id: description
+  attributes:
+    label: Describe the bug
+    placeholder: A clear and concise description of what the bug is.
+  validations:
+    required: true
+- type: textarea
+  id: steps
+  attributes:
+    label: To Reproduce
+    placeholder: |
+      Steps to reproduce the behavior:
+      1. Go to '...'
+      2. Click on '....'
+      3. Scroll down to '....'
+      4. See error
     validations:
       required: true
-  -type: dropdown
-    id: method
-    attributes:
-      label: Select the method type
-      multiple: true
-      options:
-        - One Variable Equations
-        - Systems of Equations
-        - Function Approximation
-        - Numerical Integration
-        - Ordinary Differential Equation
-        - Other
+- type: textarea
+  id: behaviour
+  attributes:
+    label: Expected behavior
+    placeholder: A clear and concise description of what you expected to happen.
     validations:
       required: true
-  - type: textarea
-    id: description
-    attributes:
-      label: Describe the bug
-      placeholder: A clear and concise description of what the bug is.
-    validations:
-      required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: To Reproduce
-      placeholder: |
-        Steps to reproduce the behavior:
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
-      validations:
+- type: textarea
+  id: screenshots
+  attributes:
+    label: Put any screenshots (optional)
+- type: checkboxes
+  id: terms
+  attributes:
+    label: Extra field
+    options:
+      - label: I have used the search function to check if this issue already exists
         required: true
-  - type: textarea
-    id: behaviour
-    attributes:
-      label: Expected behavior
-      placeholder: A clear and concise description of what you expected to happen.
-      validations:
-        required: true
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Put any screenshots (optional)
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Extra field
-      options:
-        - label: I have used the search function to check if this issue already exists
-          required: true
-  - type: markdown
-    attributes:
-      value: |
-        Thank you for reporting this issue! We will reach you as soon as possible.
+- type: markdown
+  attributes:
+    value: |
+      Thank you for reporting this issue! We will reach you as soon as possible.
