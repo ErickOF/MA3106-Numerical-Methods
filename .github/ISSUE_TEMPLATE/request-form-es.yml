@@ -44,22 +44,22 @@ body:
   attributes:
     label: Valores de entrada.
     placeholder: Lista de cada entrada y la descripción de para qué es cada una.
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   id: behaviour
   attributes:
     label: Comportamiento esperado
     placeholder: Descripción clara y concisa de qué se espera que pase.
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   id: screenshots
   attributes:
     label: Pruebas
     placeholder: Agregar al menos tres ejemplos para probar el algoritmo.
-    validation:
-      required: true
+  validations:
+    required: true
 - type: markdown
   attributes:
     value: |
