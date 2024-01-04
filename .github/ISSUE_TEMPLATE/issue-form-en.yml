@@ -4,7 +4,7 @@ title: Give me a good name
 labels: ["bug", "help wanted"]
 assignees: "ErickOF"
 body:
-  - type: markdown
+  -type: markdown
     attributes:
       value: |
         Please fill out the sections below to help us reproduce the bug and fix your issue.
