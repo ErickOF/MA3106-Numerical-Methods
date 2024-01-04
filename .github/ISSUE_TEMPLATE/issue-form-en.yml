@@ -37,8 +37,8 @@ body:
   attributes:
     label: Describe the bug
     placeholder: A clear and concise description of what the bug is.
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   id: steps
   attributes:
@@ -56,8 +56,8 @@ body:
   attributes:
     label: Expected behavior
     placeholder: A clear and concise description of what you expected to happen.
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   id: screenshots
   attributes:
