@@ -44,22 +44,22 @@ body:
   attributes:
     label: Input values
     placeholder: List each input and describe what they are for
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   id: behaviour
   attributes:
     label: Expected behavior
     placeholder: A clear and concise description of what you expected to happen.
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   id: tests
   attributes:
     label: Tests
     placeholder: Add at least 3 examples to test the algorithm.
-    validation:
-      required: true
+  validations:
+    required: true
 - type: markdown
   attributes:
     value: |
