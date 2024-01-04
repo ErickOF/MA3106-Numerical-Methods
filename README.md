@@ -18,9 +18,9 @@
     <br />
     <br />
     ·
-    <a href="https://github.com/ErickOF/MA3106-Numerical-Methods/issues/new?assignees=ErickOF&labels=bug&projects=&template=-programming-language--method-type--method-name---error-.md&title=">Reportar Bug</a>
+    <a href="https://github.com/ErickOF/MA3106-Numerical-Methods/issues/new?assignees=ErickOF&labels=bug%2Chelp+wanted&projects=&template=issue-form-es.yml&title=Dame+un+buen+nombre">Reportar Bug</a>
     ·
-    <a href="https://github.com/ErickOF/MA3106-Numerical-Methods/issues/new?assignees=ErickOF&labels=enhancement&projects=&template=-programming-language--method-type--method-name---request-name-.md&title=">Pedir algoritmo</a>
+    <a href="https://github.com/ErickOF/MA3106-Numerical-Methods/issues/new?assignees=ErickOF&labels=enhancement%2Chelp+wanted&projects=&template=request-form-es.yml&title=Dame+un+buen+nombre">Pedir algoritmo</a>
   </p>
 </p>
 
